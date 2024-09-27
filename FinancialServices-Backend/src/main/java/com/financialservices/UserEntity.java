@@ -1,8 +1,11 @@
 package com.financialservices;
 
+import org.antlr.v4.runtime.misc.NotNull;
+
 import io.micrometer.common.lang.NonNull;
 import io.micrometer.common.lang.Nullable;
 import jakarta.annotation.Generated;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,24 +21,25 @@ public class UserEntity {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long userid;
 	
-	@NonNull
+	
+	@Column(nullable = false)
 	private String firstname;
-	@NonNull
+	@Column(nullable=false)
 	private String secondname;
-	@NonNull
+	@Column(nullable=false)
 	private char gender;
-	@NonNull
+	@Column(nullable=false)
 	private String dob;
 	
-	@NonNull
+	@Column(nullable=false)
 	private String mothername;
-	@NonNull
+	@Column(nullable=false)
 	private String email;
 	
-	@NonNull
+	@Column(nullable=false)
 	private String country;
 	
-	@NonNull
+	@Column(nullable=false)
 	private String phonenumber;
 	
 	
